@@ -30,4 +30,4 @@ _You can access the application under localhost:3000 from your browser_
     docker build -t my-app:1.0 .       
     
 The dot "." at the end of the command denotes location of the Dockerfile.
-correctet by DenisPlk
+correctet by DenisPlk#2
