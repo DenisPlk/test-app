@@ -5,11 +5,12 @@ ENV MONGO_DB_USERNAME=admin \
 
 RUN mkdir -p /home/my-app
 
-COPY ./my-app /home/my-app
+COPY . /home/my-app
 
 WORKDIR /home/my-app
 
-RUN npm install
+RUN cd /home/my-app/app \
+    npm install
 
 
 
