@@ -15,7 +15,7 @@ pipeline {
                   echo 'building the image'
                   withCredentials([usernamePassword(credentialsId: '666125743361', passwordVariable: 'PASS', usernameVariable: 'USER' ])
                       sh 'docker build -t 666125743361.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.1 .'
-                      sh "echo $PASS | docker login -u $USER --password-stdin dockerhost"
+                      sh "echo $PASS | docker login -u $USER --password-stdin"
                       sh 'docker push 666125743361.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.1'
           }
       } 
