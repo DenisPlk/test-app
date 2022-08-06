@@ -19,9 +19,9 @@ pipeline {
                 script {
                     echo "building the docker image..."
                     withCredentials([usernamePassword(credentialsId: 'aws-cred', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                        sh "docker build -t ${DOCKER_REPO}:${IMAGE_NAME} ."
+                        sh "docker build -t 666125743361.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.1 ."
                         sh "echo $PASS | docker login -u $USER --password-stdin ${DOCKER_REPO_SERVER}"
-                        sh "docker push ${DOCKER_REPO}:${IMAGE_NAME}"
+                        sh "docker push 666125743361.dkr.ecr.eu-central-1.amazonaws.com/my-app:1.1
                     }
                 }
             }
